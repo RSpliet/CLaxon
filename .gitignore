@@ -1,0 +1,11 @@
+# CMake generated
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+*.ninja
+.ninja*
+Makefile
+/cnn_relu
+/cnn_maxpool
+/cnn_convolution
+/frnn

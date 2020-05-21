@@ -1,0 +1,4 @@
+Data sets are an uncompressed translated representation obtained from PCL [0].
+XXX: license?
+
+[0] http://pointclouds.org/documentation/tutorials/normal_distributions_transform.php

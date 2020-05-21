@@ -1,0 +1,46 @@
+CLaxon is a set of OpenCL benchmarks testing the performance of various massive
+parallel algorithms relevant for safety-critical systems. The aim of this
+project is to aid the evaluation of OpenCL-capable architectures. This could be
+in the context of architectural research or in the developments of (part of) an
+OpenCL compiler. Optionally, these benchmarks can be useful for (automated)
+regression testing of compilers or GPU simulators.
+
+Characteristic for CLaxon is that kernels will always run with the same input
+data, and are thus expected to roughly produce the same output data. No
+validation code is included currently, but patches welcome.
+
+It is _not_ my aim to establish a new benchmark suite used for performance
+evaluation of commercial architectures. Those who wish to evaluate such
+GPU architectures comparatively are encouraged to run SPEC Accel instead.
+
+This work represents the collective work of Rodinia[1], Parboil[2], 
+KinectFusion[3] and my own.
+
+Requirements:
+- CMake >= 2.8.10
+- OpenCL >= 1.1
+- (Optional) ninja-build (or ninja on Debian-derivatives)
+
+On Fedora, I recommend installing the following packages to satisfy the OpenCL
+dependencies:
+- libopencl-headers
+- ocl-icd
+- ocl-icd-devel
+
+Build instructions:
+- cmake -G Ninja .
+- ninja
+
+Acknowledgements:
+data/frnn/frnn_stanbun_000.txt: a projection of the Stanford bunny
+pointcloud, courtesy of Stanford University Computer Graphics Laboratory.
+
+[1] S. Che, M. Boyer, J. Meng, D. Tarjan, J. W. Sheaffer, Sang-Ha Lee and
+    K. Skadron. "Rodinia: A Benchmark Suite for Heterogeneous Computing". IEEE
+    International Symposium on Workload Characterization, Oct 2009.
+[2] “Parboil benchmark suite,” 2010,
+    http://impact.crhc.illinois.edu/Parboil/parboil.aspx.
+[3] R. A. Newcombe, S. Izadi, O. Hilliges, D. Molyneaux, D. Kim, A. J. Davison,
+    P. Kohi, J. Shotton, S. Hodges, and A. Fitzgibbon, “Kinectfusion: Real-time
+    dense surface mapping and tracking,” in 2011 10th IEEE International
+    Symposium on Mixed and Augmented Reality, Oct 2011.
